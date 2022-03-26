@@ -4,7 +4,9 @@
   "description": "Azure DevOps integration with ALM Octane",
   "main": "StartTask.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Moshe Stekel (mstekel@gmail.com)",
   "license": "ISC",
@@ -15,10 +17,12 @@
     "util.promisify": "^1.0.0",
     "whatwg-url": "^7.0.0",
     "xml-escape": "^1.1.0",
-    "xml-js": "^1.6.11"
+    "xml-js": "^1.6.11",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/node": "^12.0.12",
     "@types/q": "^1.5.2"
-  }
+  },
+  "snyk": true
 }
